@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  background-color: magenta;
+}
+
+/* Make content area fill the entire browser window */
+html,
+.fullscreen {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Center the content in the browser window */
+.container {
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  
+}
+.Removed {
+  visibility: hidden;
+  display: none;
+}
+
+/*https://stackoverflow.com/questions/446060/css-two-divs-next-to-each-other*/
+#divScheduleTemplate {
+  display: flex;
+}
+.divBalance {
+  width: 100px;
+  background: rgb(255 106 0);
+  text-align: center;
+  align-content: center
+  /* Just so it's visible */
+}
+.divDate {
+    width: 100px;
+  flex: 1;
+  /* Grow to rest of container */
+  background: rgb(0 255 33);
+  /* Just so it's visible */
+}
+.divPayment{
+    width:100px;
+    background: rgb(0 255 255);
+}
+.Header{
+    text-align: center;
+    font:bold;
+}
+.btnShowHide{
+    height:48px;
+    width:110px;
+}
+.button{
+    height:48px;
+    width:110px;
+}
+.divMonthlyPayment{
+    height:48px;
+    width:110px;
+}
+.Principal {
+    height: 48px;
+    width: 110px;
+    text-align: center;
+}
+.Months {
+    height: 48px;
+    width: 110px;
+    text-align: center;
+}
+.APR {
+    height: 48px;
+    width: 110px;
+    text-align:center;
+}

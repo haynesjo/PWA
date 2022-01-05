@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PWA APP</title>
+    <!-- Change the Title -->
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Put your description here.">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="white"/> <!-- Needs to match what is in the Manifest.json -->
+    <link rel="apple-touch-icon" href="/images/android-launchericon-192-192.png">
+</head>
+<body class="fullscreen">
+    <div class="container">
+        <h1 class="title"><u>Pwa Application</u></h1>
+        <!--I need to put labels in for the other wto text boxes-->
+        <p>Buying a loan is a big decision that many of us make. Here on PWA application we try to make it simplier for you to calulate all of the information. Principal is how much you start with. Months is how many months is on the loan and APR is the annual percentage rate. Go ahead and click calulate my loan!!!</p>
+        <table>
+        <tr>
+            <th>
+                <label for="txtPrincipal"><center>Principal</center></label>
+                <input type="text" class="Principal"id="txtPrincipal" value="100000" oninput="ValidateNumber(this, true);" /></th>
+        </tr>
+        <tr>
+            <th>
+                <label for="txtMonths"><center>Months</center></label>
+                <input type="text" class="Months" id="txtMonths" value="10" oninput="ValidateNumber(this, false);" />
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <label for="txtAPR"><center>APR</center></label>
+                <input type="number" class="APR" id="txtAPR" value="6" oninput="ValidateNumber(this, true);" />
+            </th>
+        </tr>
+            </table>
+ 
+        <div id="divLoanTemplate" class="Removed">
+
+
+            <table>
+                <tr>
+                    <th>Principal:</th>
+                    <td><div class="divPrincipal"></div></td>
+                </tr>
+                <tr>
+                    <th>Months:</th>
+                    <td><div class="divMonths"></div></td>
+                </tr>
+                <tr>
+                    <th><center>Payment:</center></th>
+                    <td><div class="divMonthlyPayment"></div></td>
+                </tr>
+                <tr>
+                    <th>APR</th>
+                    <td><div class="divAPR"></div> </td>
+                </tr>
+            </table>
+            <input type="button" class="btnShowHide" value="Hide" />
+            <div class="divLoanSchedule"></div>
+
+
+        </div>
+        <div id="divScheduleTemplate" class="Removed">
+
+            <div class="divDate">Date</div>
+            <div class="divPayment">Payment</div>
+            <div class="divBalance">Balance</div>
+
+
+        </div>
+        <button type="button" class="button" onclick="loadJSON()">Calulate Your Loan</button>
+    </div>
+  <div id="divLoanList"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>
